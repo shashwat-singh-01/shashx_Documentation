@@ -85,9 +85,7 @@
     transition: background 0.3s ease;
   }
   
-  .cta:hover {
-    color: red;
-  }
+
   
   /* Section Base */
   .section {
