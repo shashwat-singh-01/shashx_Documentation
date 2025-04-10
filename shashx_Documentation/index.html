@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>shashx | Docs</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>shashx</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#syntax">Syntax</a>
+        <a href="#install">Install</a>
+        <a href="#project">Project</a>
+        <a href="#contribute">Contribute</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero">
+    <div class="container">
+      <h2>Welcome to <span>shashx</span></h2>
+      <p>A lightweight, dynamically-typed interpreted language built for simplicity and learning.</p>
+      <a href="#install" class="cta">Get Started</a>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>📖 What is shashx?</h2>
+      <p><strong>shashx</strong> is a custom-designed, educational programming language developed by <a href="https://github.com/shashwat-singh-01" target="_blank">Shashwat Singh</a>, focusing on simplicity, clean syntax, and powerful learning potential.</p>
+      <ul>
+        <li>🔤 Inspired by modern scripting languages</li>
+        <li>🧠 Created to understand how interpreters, tokenizers, and parsers work</li>
+        <li>🧪 Perfect for experimenting with language design</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="features" class="section dark">
+    <div class="container">
+      <h2>✨ Features</h2>
+      <ul>
+        <li>✅ Dynamically typed</li>
+        <li>✅ Interpreted (no compilation needed)</li>
+        <li>✅ Custom clean syntax</li>
+        <li>✅ Supports variables, loops, conditionals, and print statements</li>
+        <li>✅ Built with JavaScript (Node.js)</li>
+        <li>✅ CLI-based execution</li>
+        <li>✅ VS Code syntax highlighting extension</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="install" class="section">
+    <div class="container">
+      <h2>📦 Installation</h2>
+      <p><strong>Install via NPM (Recommended)</strong></p>
+      <pre><code>npm install -g shashx</code></pre>
+      <p><strong>Run a <code>.sx</code> File</strong></p>
+      <pre><code>shashx path/to/hello.sx</code></pre>
+    </div>
+  </section>
+
+  <section id="syntax" class="section dark">
+    <div class="container">
+      <h2>🧠 Syntax Guide</h2>
+
+      <h3>➕ Print Statement</h3>
+      <pre><code>pf("Hello, World!")</code></pre>
+
+      <h3>📦 Variable Declaration</h3>
+      <pre><code>@x = 10
+@y = 20
+pf(>x)
+pf(>y)</code></pre>
+
+      <h3>🔁 Loops</h3>
+
+      <h4>➰ For Loop (flp)</h4>
+      <pre><code>flp @i = 0 to 3 {
+  pf("flp i = " > i);
+}</code></pre>
+
+      <h4>🔁 While Loop (wlp)</h4>
+      <pre><code>@j = 0;
+wlp j < 2 {
+  pf("wlp j = " > j);
+  j = j + 1;
+}</code></pre>
+
+      <h4>🔁 Do-While Loop (dlp)</h4>
+      <pre><code>@k = 0;
+dlp {
+  pf("dlp k = " > k);
+  k = k + 1;
+} wlp k < 2;</code></pre>
+
+      <h3>🔂 Conditional Statements</h3>
+      <pre><code>@x = 10
+if x > 5
+  pf("Greater than 5")
+elf x == 5
+  pf("Equals 5")
+el
+  pf("Less than 5")</code></pre>
+    </div>
+  </section>
+
+  <section id="project" class="section">
+    <div class="container">
+      <h2>📁 Project Structure</h2>
+      <pre><code>shashx-lang/
+├── bin/
+│   └── shashx.bat         # CLI batch file
+├── examples/
+│   └── loop.sx            # Sample code files
+├── src/
+│   ├── lexer.js
+│   ├── parser.js
+│   └── interpreter.js
+├── main.js                # Entry point
+├── package.json
+└── README.md</code></pre>
+
+      <h2>🧩 VS Code Extension Support</h2>
+      <p>You can install syntax highlighting support via:</p>
+      <a href="https://marketplace.visualstudio.com/items?itemName=shashwat-sx.shashx-lang" target="_blank">👉 shashx-lang on Visual Studio Marketplace</a>
+      <ul>
+        <li>🔤 Syntax highlighting</li>
+        <li>🗂️ File recognition (.sx)</li>
+        <li>✍️ Friendly editing experience</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contribute" class="section dark">
+    <div class="container">
+      <h2>📢 Contribution</h2>
+      <p>Want to improve <strong>shashx</strong>?</p>
+      <ul>
+        <li>🍴 Fork the repo</li>
+        <li>🛠️ Make changes</li>
+        <li>📩 Open a PR</li>
+      </ul>
+      <p>Bug reports, ideas, and suggestions are always welcome!</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>📬 Contact</h2>
+      <p><strong>Shashwat Singh</strong></p>
+      <p>📧 Email: <a href="mailto:singhshashwat521@gmail.com">singhshashwat521@gmail.com</a></p>
+      <p>🌐 GitHub: <a href="https://github.com/shashwat-singh-01" target="_blank">github.com/shashwat-singh-01</a></p>
+      <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/shashwat-singh-200495248" target="_blank">linkedin.com/in/shashwat-singh-200495248</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Shashwat Singh • shashx-lang • MIT License</p>
+    </div>
+  </footer>
+</body>
+</html>
