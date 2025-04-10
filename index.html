@@ -5,29 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>shashx | Docs</title>
   <link rel="stylesheet" href="./style.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Animate.css (for fade-in, etc.) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
 </head>
-<body>
-  <header>
-    <div class="container">
-      <h1>🚀SHASHX</h1>
-      <nav>
-  <div class="nav-toggle" id="navToggle">&#9776;</div>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#about">About</a></li>
-    <li><a href="#features">Features</a></li>
-    <li><a href="#syntax">Syntax</a></li>
-    <li><a href="#install">Install</a></li>
-    <li><a href="#project">Project</a></li>
-    <li><a href="#contribute">Contribute</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-    </div>
-  </header>
-
+  <body class="bg-[#0e0e0e] text-white font-poppins">
+    <header class="bg-[#111] shadow sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+        <h1 class="text-2xl font-bold text-cyan-400">🚀SHASHX</h1>
+        <nav>
+          <div class="nav-toggle text-2xl cursor-pointer lg:hidden" id="navToggle">&#9776;</div>
+          <ul class="nav-links hidden lg:flex gap-6 font-semibold text-white" id="navLinks">
+            <li><a href="#about" class="hover:text-cyan-400">About</a></li>
+            <li><a href="#features" class="hover:text-cyan-400">Features</a></li>
+            <li><a href="#syntax" class="hover:text-cyan-400">Syntax</a></li>
+            <li><a href="#install" class="hover:text-cyan-400">Install</a></li>
+            <li><a href="#project" class="hover:text-cyan-400">Project</a></li>
+            <li><a href="#contribute" class="hover:text-cyan-400">Contribute</a></li>
+            <li><a href="#contact" class="hover:text-cyan-400">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  
   <section id="hero">
-    <div class="container">
+    <div class="acontainer">
       <h2>Welcome to <span>shashx</span></h2>
       <p>A lightweight, dynamically-typed interpreted language built for simplicity and learning.</p>
       <a href="#install" class="cta">Get Started</a>
@@ -35,150 +43,353 @@
   </section>
 
   <section id="about" class="section">
-    <div class="container">
-      <h2>📖 What is shashx?</h2>
-      <p><strong>shashx</strong> is a custom-designed, educational programming language developed by <a href="https://github.com/shashwat-singh-01" target="_blank">Shashwat Singh</a>, focusing on simplicity, clean syntax, and powerful learning potential.</p>
-      <ul>
-        <li>🔤 Inspired by modern scripting languages</li>
-        <li>🧠 Created to understand how interpreters, tokenizers, and parsers work</li>
-        <li>🧪 Perfect for experimenting with language design</li>
+    <div class="container space-y-6 text-justify">
+      <h2 class="text-2xl font-semibold">📖 What is shashx?</h2>
+      
+      <p class="text-lg">
+        <strong>shashx</strong> is a beginner-friendly, custom-designed programming language aimed at demystifying how programming languages work under the hood. It is built with simplicity and clarity in mind — offering clean syntax, custom logic structures, and real-time execution through an interpreter model.
+      </p>
+  
+      <p class="text-lg">
+        Developed by <a href="https://github.com/shashwat-singh-01" target="_blank" class="text-blue-600 font-bold hover:underline">Shashwat Singh</a>, <strong>shashx</strong> serves as both a personal project and a powerful educational tool that helps aspiring developers understand the core concepts behind language design.
+      </p>
+  
+      <ul class="list-disc list-inside space-y-2 text-gray-700">
+        <li>🔤 Inspired by modern scripting languages like Python and JavaScript</li>
+        <li>🧠 Designed to teach how interpreters, tokenizers, and parsers work from scratch</li>
+        <li>🧪 Ideal for experimenting with syntax rules, logic flow, and runtime behaviors</li>
+        <li>🎯 Great for students, hobbyists, and developers curious about building languages</li>
+        <li>📚 Comes with documentation, VS Code support, and examples</li>
       </ul>
+  
+      <p class="text-lg">
+        Whether you're a curious developer or an enthusiast interested in compiler theory, <strong>shashx</strong> opens the doors to understanding what's behind every line of code you write — by letting you build and run your own.
+      </p>
     </div>
   </section>
+  
+
+
 
   <section id="features" class="section dark">
-    <div class="container">
-      <h2>✨ Features</h2>
-      <ul>
-        <li>✅ Dynamically typed</li>
-        <li>✅ Interpreted (no compilation needed)</li>
-        <li>✅ Custom clean syntax</li>
-        <li>✅ Supports variables, loops, conditionals, and print statements</li>
-        <li>✅ Built with JavaScript (Node.js)</li>
-        <li>✅ CLI-based execution</li>
-        <li>✅ VS Code syntax highlighting extension</li>
-      </ul>
+    <div class="container grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+      
+      <!-- Left Side: Features List -->
+      <div class="space-y-6">
+        <h2 class="text-2xl font-semibold">✨ Features</h2>
+        <ul class="list-disc list-inside space-y-2 text-gray-300">
+          <li>✅ <strong>Dynamically typed</strong> – no need to declare types</li>
+          <li>⚡ <strong>Interpreted</strong> – executes directly without compilation</li>
+          <li>🧼 <strong>Custom clean syntax</strong> – simple and intuitive commands</li>
+          <li>🔁 <strong>Loop support</strong> – <code>flp</code>, <code>wlp</code>, <code>dlp</code></li>
+          <li>🧠 <strong>Conditionals</strong> – <code>if</code>, <code>elf</code>, <code>el</code></li>
+          <li>🖨️ <strong>Print statements</strong> with <code>pf()</code></li>
+          <li>🛠️ <strong>Built with JavaScript</strong> (Node.js)</li>
+          <li>🖥️ <strong>CLI-based execution</strong></li>
+          <li>💻 <strong>VS Code syntax extension</strong> support</li>
+        </ul>
+      </div>
+  
+      <!-- Right Side: Under the Hood -->
+      <div class="space-y-6">
+        <h2 class="text-2xl font-semibold">🔧 Under the Hood</h2>
+        <p class="text-gray-300">
+          <strong>shashx</strong> is built from scratch using JavaScript and follows a basic interpreter pattern. Here's how it works internally:
+        </p>
+        <ul class="list-disc list-inside text-gray-300 space-y-2">
+          <li>📜 <strong>Lexer:</strong> Breaks your code into tokens (keywords, symbols, identifiers).</li>
+          <li>🌳 <strong>Parser:</strong> Builds an Abstract Syntax Tree (AST) from tokens.</li>
+          <li>🧠 <strong>Interpreter:</strong> Walks the AST and executes commands in real-time.</li>
+          <li>📁 <strong>File Extension:</strong> Uses <code>.sx</code> for source code files.</li>
+          <li>🧪 <strong>Minimal runtime:</strong> Everything runs via a lightweight runtime powered by Node.js.</li>
+        </ul>
+        <p class="text-sm text-gray-400">
+          This structure makes <strong>shashx</strong> simple, fast, and easy to extend!
+        </p>
+      </div>
+  
     </div>
   </section>
+  
+
 
   <section id="install" class="section">
-    <div class="container">
-      <h2>📦 Installation</h2>
-      <p><strong>Install via NPM (Recommended)</strong></p>
-      <pre><code>npm install -g shashx</code></pre>
-      <p><strong>Run a <code>.sx</code> File</strong></p>
-      <pre><code>shashx hello.sx</code></pre>
+    <div class="container grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+      <!-- Left Side: Installation Instructions -->
+      <div class="space-y-6">
+        <h2 class="text-2xl font-semibold">📦 Installation</h2>
+  
+        <div>
+          <p class="font-semibold">Install via NPM (Recommended)</p>
+          <pre class="bg-[#1a1a1a] text-gray-300 p-4 rounded-md overflow-x-auto">
+  <code>npm install -g shashx</code></pre>
+        </div>
+  
+        <div>
+          <p class="font-semibold">Run a <code>.sx</code> File</p>
+          <pre class="bg-[#1a1a1a] text-gray-300 p-4 rounded-md overflow-x-auto">
+  <code>shashx hello.sx</code></pre>
+        </div>
+      </div>
+  
+      <!-- Right Side: Example File and Output -->
+      <div class="space-y-6">
+        <h2 class="text-2xl font-semibold">💡 Example: hello.sx</h2>
+  
+        <div>
+          <p class="font-semibold">hello.sx</p>
+          <pre class="bg-[#1a1a1a] text-green-300 p-4 rounded-md overflow-x-auto">
+  <code>pf("Hello from shashx!");</code></pre>
+        </div>
+  
+        <div>
+          <p class="font-semibold">Terminal Output</p>
+          <pre class="bg-[#0f0f0f] text-[#00ff88] p-4 rounded-md overflow-x-auto">
+  <code>Hello from shashx!</code></pre>
+        </div>
+      </div>
     </div>
   </section>
+  
 
   <section id="syntax" class="section dark">
-    <div class="container">
-      <h2>🧠 Syntax Guide</h2>
+    <div class="container mx-auto grid md:grid-cols-2 gap-12 items-start">
+  
+      <!-- Left Side Syntax -->
+<div class="space-y-6">
+  <h2 class="text-2xl font-semibold">🧠 Syntax Guide</h2>
 
-      <h3>➕ Print Statement</h3>
-      <pre><code>pf("Hello, World!");</code></pre>
+  <div>
+    <h3 class="text-xl font-semibold mb-2">➕ Print Statement</h3>
+    <pre class="bg-[#1a1a1a] text-gray-300 p-4 rounded-md overflow-x-auto">
+<code>pf("Hello, World!");</code></pre>
+  </div>
 
-      <h3>📦 Variable Declaration</h3>
-      <pre><code>@x = 10
+  <div>
+    <h3 class="text-xl font-semibold mb-2">📦 Variable Declaration</h3>
+    <pre class="bg-[#1a1a1a] text-gray-300 p-4 rounded-md overflow-x-auto">
+<code>@x = 10
 @y = 20
 pf(>x)
 pf(>y)</code></pre>
+  </div>
 
-      <h3>🔁 Loops</h3>
-
-      <h4>➰ For Loop (flp)</h4>
-      <pre><code>flp @i = 0 to 3 {
+  <div>
+    <h3 class="text-xl font-semibold mb-2">➰ For Loop (flp)</h3>
+    <pre class="bg-[#1a1a1a] text-gray-300 p-4 rounded-md overflow-x-auto">
+<code>flp @i = 0 to 3 {
   pf("flp i = " > i);
 }</code></pre>
+  </div>
 
-      <h4>🔁 While Loop (wlp)</h4>
-      <pre><code>@j = 0;
-wlp j < 2 {
-  pf("wlp j = " > j);
-  j = j + 1;
-}</code></pre>
+  <div>
+    <h3 class="text-xl font-semibold mb-2">📝 Comment Line</h3>
+    <pre class="bg-[#1a1a1a] text-gray-300 p-4 rounded-md overflow-x-auto">
+<code>~> This is a single-line comment</code></pre>
+    <p class="text-gray-400 mt-2">Use <code>~></code> to write single-line comments in <strong>shashx</strong>.</p>
+  </div>
+</div>
 
-      <h4>🔁 Do-While Loop (dlp)</h4>
-      <pre><code>@k = 0;
-dlp {
-  pf("dlp k = " > k);
-  k = k + 1;
-} wlp k < 2;</code></pre>
-
-      <h3>🔂 Conditional Statements</h3>
-      <pre><code>@x = 10
-if x > 5
-  pf("Greater than 5")
-elf x == 5
-  pf("Equals 5")
-el
-  pf("Less than 5")</code></pre>
+  
+      <!-- Right Side Syntax -->
+      <div class="space-y-6 mt-10 md:mt-0">
+  
+        <div>
+          <h3 class="text-xl font-semibold mb-2">🔁 While Loop (wlp)</h3>
+          <pre class="bg-[#1a1a1a] text-gray-300 p-4 rounded-md overflow-x-auto">
+  <code>@j = 0;
+  wlp j < 2 {
+    pf("wlp j = " > j);
+    j = j + 1;
+  }</code></pre>
+        </div>
+  
+        <div>
+          <h3 class="text-xl font-semibold mb-2">🔁 Do-While Loop (dlp)</h3>
+          <pre class="bg-[#1a1a1a] text-gray-300 p-4 rounded-md overflow-x-auto">
+  <code>@k = 0;
+  dlp {
+    pf("dlp k = " > k);
+    k = k + 1;
+  } wlp k < 2;</code></pre>
+        </div>
+  
+        <div>
+          <h3 class="text-xl font-semibold mb-2">🔂 Conditional Statements</h3>
+          <pre class="bg-[#1a1a1a] text-gray-300 p-4 rounded-md overflow-x-auto">
+  <code>@x = 10
+  if x > 5
+    pf("Greater than 5")
+  elf x == 5
+    pf("Equals 5")
+  el
+    pf("Less than 5")</code></pre>
+        </div>
+  
+      </div>
     </div>
   </section>
+  
 
-  <section id="project" class="section">
-    <div class="container">
-      <h2>📁 Project Structure</h2>
-      <pre><code>shashx-lang/
-├── bin/
-│   └── shashx.bat         # CLI batch file
-├── examples/
-│   └── loop.sx            # Sample code files
-├── src/
-│   ├── lexer.js
-│   ├── parser.js
-│   └── interpreter.js
-├── main.js                # Entry point
-├── package.json
-└── README.md</code></pre>
-
-      <h2>🧩 VS Code Extension Support</h2>
-      <p>You can install syntax highlighting support via:</p>
-      <a href="https://marketplace.visualstudio.com/items?itemName=shashwat-sx.shashx-lang" target="_blank">👉 shashx-lang on Visual Studio Marketplace</a>
-      <ul>
-        <li>🔤 Syntax highlighting</li>
-        <li>🗂️ File recognition (.sx)</li>
-        <li>✍️ Friendly editing experience</li>
-      </ul>
+  <section id="project" class="section dark">
+    <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+      
+      <!-- Left Side: VS Code Extension -->
+      <div class="space-y-6">
+        <h2 class="text-2xl font-semibold">🧩 VS Code Extension Support</h2>
+        <p class="text-gray-300">
+          Add syntax highlighting for <strong class="text-cyan-400">shashx</strong> in your VS Code editor!
+        </p>
+        <ul class="list-disc list-inside text-gray-400 space-y-1">
+          <li>🔤 Syntax highlighting</li>
+          <li>🗂️ File recognition (<code>.sx</code>)</li>
+          <li>✍️ Friendly editing experience</li>
+        </ul>
+        <a href="https://marketplace.visualstudio.com/items?itemName=shashwat-sx.shashx-lang" target="_blank"
+           class="inline-block bg-cyan-600 text-white px-6 py-2 rounded-md hover:bg-cyan-700 transition">
+          👉 Install Extension
+        </a>
+      </div>
+  
+      <!-- Right Side: Project Structure -->
+      <div>
+        <h2 class="text-2xl font-semibold mb-4">📁 Project Structure</h2>
+        <pre class="bg-[#1a1a1a] text-gray-300 p-4 rounded-md overflow-x-auto">
+  <code>shashx-lang/
+  ├── bin/
+  │   └── shashx.bat         # CLI batch file
+  ├── examples/
+  │   └── loop.sx            # Sample code files
+  ├── src/
+  │   ├── lexer.js
+  │   ├── parser.js
+  │   └── interpreter.js
+  ├── main.js                # Entry point
+  ├── package.json
+  └── README.md</code></pre>
+      </div>
+  
     </div>
   </section>
+  
 
-  <section id="contribute" class="section dark">
-    <div class="container">
-      <h2>📢 Contribution</h2>
-      <p>Want to improve <strong>shashx</strong>?</p>
-      <ul>
-        <li>🍴 Fork the repo</li>
-        <li>🛠️ Make changes</li>
-        <li>📩 Open a PR</li>
-      </ul>
-      <p>Bug reports, ideas, and suggestions are always welcome!</p>
+  <section id="contribute" class="bg-[#0e0e0e] text-white py-16 px-6">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      
+      <!-- Left Side: Contribution Guide -->
+      <div data-aos="fade-right">
+        <h2 class="text-3xl font-bold mb-4 text-cyan-400">📢 Contribution</h2>
+        <p class="mb-4 text-justify">
+          Want to improve <strong>shashx</strong>? Whether it's fixing bugs, adding new features, or improving documentation — every contribution counts!
+        </p>
+        <ul class="list-disc list-inside space-y-2">
+          <li>🍴 Fork the repository</li>
+          <li>🛠️ Make your changes</li>
+          <li>📩 Open a pull request</li>
+        </ul>
+        <p class="mt-4">Bug reports, feature ideas, and suggestions are always welcome. Let's build something great together!</p>
+      </div>
+  
+      <!-- Right Side: CTA + Info -->
+      <div class="text-center md:text-left" data-aos="fade-left">
+        <h3 class="text-2xl font-semibold mb-4 text-cyan-300">🌟 Ready to Contribute?</h3>
+        <p class="mb-6">Jump straight into the GitHub repository and start collaborating on the future of <strong>shashx</strong>.</p>
+        <a href="https://github.com/shashwat-singh-01/shashx" target="_blank" rel="noopener noreferrer" class="inline-block bg-cyan-400 hover:bg-cyan-500 text-white font-semibold py-3 px-6 rounded-full transition duration-300">
+          🚀 Go to GitHub Repo
+        </a>
+        <p class="mt-6 text-sm text-gray-400">Don’t forget to ⭐ the repo if you find it useful!</p>
+      </div>
+  
     </div>
   </section>
+  
 
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>📬 Contact</h2>
-      <p><strong>Shashwat Singh</strong></p>
-      <p>📧 Email: <a href="mailto:singhshashwat521@gmail.com">singhshashwat521@gmail.com</a></p>
-      <p>🌐 GitHub: <a href="https://github.com/shashwat-singh-01" target="_blank">github.com/shashwat-singh-01</a></p>
-      <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/shashwat-singh-200495248" target="_blank">linkedin.com/in/shashwat-singh-200495248</a></p>
+  <section id="contact" class="section bg-[#111] text-white">
+    <div class="container mx-auto px-4 py-12 flex flex-col lg:flex-row gap-10">
+      
+      <!-- Left: Contact Info -->
+      <div class="lg:w-1/2 space-y-5">
+        <h2 class="text-3xl font-bold text-cyan-400 mb-2">📬 Contact</h2>
+      
+        <p class="text-xl font-bold text-white">Hey there! 👋 I’m <span class="text-cyan-400">Shashwat Singh</span></p>
+        <p class="text-gray-300">A passionate <span class="text-cyan-300 font-semibold">developer, security enthusiast, and creator of the <code>shashx</code> language</span>. I'm always open to interesting conversations and cool collaborations!</p>
+      
+        <div class="flex flex-wrap gap-3 text-sm text-white">
+          <span class="bg-cyan-700 px-3 py-1 rounded-full">💻 JavaScript</span>
+          <span class="bg-cyan-700 px-3 py-1 rounded-full">🛡️ Cybersecurity</span>
+          <span class="bg-cyan-700 px-3 py-1 rounded-full">🌐 Web Dev</span>
+          <span class="bg-cyan-700 px-3 py-1 rounded-full">🧠 AI Projects</span>
+          <span class="bg-cyan-700 px-3 py-1 rounded-full">🛠️ CLI Tools</span>
+        </div>
+      
+        <blockquote class="text-gray-400 italic border-l-4 border-cyan-400 pl-4 mt-3">
+          "Code is not just a skill, it's a superpower 💥"
+        </blockquote>
+      
+        <div class="mt-4 flex items-center gap-4">
+          <div>
+            <p class="font-semibold">📧 Email: 
+              <a class="text-cyan-400 hover:underline" href="mailto:singhshashwat521@gmail.com">singhshashwat521@gmail.com</a>
+            </p>
+            <p>🌐 GitHub: 
+              <a class="text-cyan-400 hover:underline" href="https://github.com/shashwat-singh-01" target="_blank">github.com/shashwat-singh-01</a>
+            </p>
+            <p>🔗 LinkedIn: 
+              <a class="text-cyan-400 hover:underline" href="https://www.linkedin.com/in/shashwat-singh-200495248" target="_blank">linkedin.com/in/shashwat-singh-200495248</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      
+  
+      <!-- Right: Contact Form -->
+      <div class="lg:w-1/2 animate__animated animate__fadeInRight">
+        <form class="bg-[#1a1a1a] p-8 rounded-lg shadow-lg">
+          <label class="block mb-4">
+            <span class="text-sm font-semibold">Name</span>
+            <input type="text" placeholder="Your Name" class="w-full mt-1 p-2 rounded bg-[#222] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+          </label>
+  
+          <label class="block mb-4">
+            <span class="text-sm font-semibold">Email</span>
+            <input type="email" placeholder="Your Email" class="w-full mt-1 p-2 rounded bg-[#222] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+          </label>
+  
+          <label class="block mb-4">
+            <span class="text-sm font-semibold">Message</span>
+            <textarea placeholder="Your Message" rows="4" class="w-full mt-1 p-2 rounded bg-[#222] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-400"></textarea>
+          </label>
+  
+          <button type="submit" class="bg-cyan-500 hover:bg-cyan-600 text-black font-bold py-2 px-4 rounded transition-all duration-300">
+            Send Message
+          </button>
+        </form>
+      </div>
+  
     </div>
   </section>
+  
+  
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Shashwat Singh • shashx-lang • MIT License</p>
+  <footer class="bg-[#0a0a0a] text-gray-400 text-sm py-2 px-4 mt-12">
+    <div class="fcontainer mx-auto flex flex-col items-center justify-center text-center space-y-1">
+      <p>&copy; 2025 <strong class="text-cyan-400">shashx</strong>. All rights reserved.</p>
     </div>
   </footer>
+  
+  
+
+  <!-- Mobile Nav Script -->
   <script>
-  const navToggle = document.getElementById("navToggle");
-  const navLinks = document.getElementById("navLinks");
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
 
-  navToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-  });
-</script>
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("hidden");
+    });
+  </script>
 
+  <script src="script.js"></script>
 </body>
 </html>
