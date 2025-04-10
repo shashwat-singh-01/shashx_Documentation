@@ -26,6 +26,16 @@
     margin: 0 auto;
     padding: 40px 20px;
   }
+  .acontainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 120px 60px;
+  }
+  .fcontainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 10px;
+  }
   
   /* Header */
   header {
@@ -102,6 +112,9 @@ nav {
   .nav-links li {
     margin: 10px 0;
     text-align: center;
+  }
+ .nav-links li:hover {
+    color: #f0f0f0;
   }
 }
 
@@ -196,7 +209,7 @@ nav {
     background-color: #121212;
     color: #666;
     text-align: center;
-    padding: 20px;
+    padding: 1px;
     font-size: 14px;
     border-top: 1px solid #333;
   }
