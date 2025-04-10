@@ -1,0 +1,176 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0a0a;
+    color: #f0f0f0;
+    line-height: 1.7;
+  }
+  
+  a {
+    color: #00ffff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  /* Header */
+  header {
+    background-color: #121212;
+    border-bottom: 1px solid #333;
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+  }
+  
+  header h1 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 28px;
+    color: #00ffff;
+  }
+  
+  nav a {
+    margin-left: 20px;
+    font-weight: 600;
+  }
+  
+  /* Hero Section */
+  #hero {
+    background: linear-gradient(135deg, #00ffff, #006666);
+    color: #000;
+    padding: 100px 20px;
+    text-align: center;
+  }
+  
+  #hero h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+  }
+  
+  #hero span {
+    font-weight: 700;
+    color: #000;
+  }
+  
+  #hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .cta {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #000;
+    color: #00ffff;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .cta:hover {
+    background-color: #00ffff;
+    color: #000;
+  }
+  
+  /* Section Base */
+  .section {
+    padding: 60px 20px;
+  }
+  
+  .section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #00ffff;
+  }
+  
+  .section h3, .section h4 {
+    margin-top: 30px;
+    color: #66faff;
+  }
+  
+  .section ul {
+    padding-left: 20px;
+  }
+  
+  .section ul li {
+    margin-bottom: 10px;
+    list-style: disc;
+  }
+  
+  /* Dark variant */
+  .section.dark {
+    background-color: #111;
+  }
+  
+  /* Code and Pre tags */
+  pre {
+    background-color: #1e1e1e;
+    color: #00ffcc;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  
+  code {
+    background-color: #1e1e1e;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #121212;
+    color: #666;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 1px solid #333;
+  }
+  
+  /* Responsive Nav (Optional) */
+  @media (max-width: 768px) {
+    header .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav {
+      margin-top: 10px;
+    }
+  
+    nav a {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    #hero h2 {
+      font-size: 30px;
+    }
+  
+    .section h2 {
+      font-size: 24px;
+    }
+  }
+  
